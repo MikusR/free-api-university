@@ -19,7 +19,7 @@ class UniversityCollection
         $this->collection[] = $university;
     }
 
-    public function list():array
+    public function list(): array
     {
         return $this->collection;
     }

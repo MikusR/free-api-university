@@ -8,5 +8,5 @@ class Application
     {
         echo "Test";
 
-}
+    }
 }
