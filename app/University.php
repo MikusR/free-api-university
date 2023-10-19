@@ -16,35 +16,32 @@ class University
         string $name
     )
     {
+
+        $this->country = $country;
+        $this->webpages = $webpages;
+        $this->alpha_two_code = $alpha_two_code;
+        $this->name = $name;
     }
 
-    /**
-     * @return string
-     */
+
     public function getCountry(): string
     {
         return $this->country;
     }
 
-    /**
-     * @return array
-     */
+
     public function getWebpages(): array
     {
         return $this->webpages;
     }
 
-    /**
-     * @return string
-     */
+
     public function getAlphaTwoCode(): string
     {
         return $this->alpha_two_code;
     }
 
-    /**
-     * @return string
-     */
+
     public function getName(): string
     {
         return $this->name;

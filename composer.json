@@ -12,5 +12,7 @@
             "email": "mikus.rakis@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "laravel/prompts": "dev-support-older-php"
+    }
 }
