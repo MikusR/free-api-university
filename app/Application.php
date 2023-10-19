@@ -6,7 +6,7 @@ class Application
 {
     public function run()
     {
-        echo "Test";
+
 
     }
 }
