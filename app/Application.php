@@ -12,12 +12,10 @@ class Application
         $response = str_replace(' ', '+', $response);
         $results = $this->search($response);
         $this->displayResults($results);
-
     }
 
     public function displayResults(UniversityCollection $listOfUniversities): void
     {
-
         $consoleColor = new PhpConsoleColor\ConsoleColor();
         if (count($listOfUniversities->list()) === 0) {
             echo $consoleColor->apply(['bold', 'red'], "No results found\n");
@@ -28,7 +26,6 @@ class Application
             echo $consoleColor->apply(['bold', 'green'], $university->getName() . "\n");
             foreach ($university->getWebpages() as $webpage) {
                 echo $consoleColor->apply(['underline', 'blue'], $webpage . "\n");
-
             }
             echo "\n";
         }
@@ -40,7 +37,9 @@ class Application
         $jsonFile = file_get_contents($apiUrl);
         $json = json_decode($jsonFile);
         $result = new UniversityCollection();
-        if (count($json) === 0) return $result;
+        if (count($json) === 0) {
+            return $result;
+        }
         foreach ($json as $university) {
             $country = $university->country;
             $webpages = [];

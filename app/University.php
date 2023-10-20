@@ -11,12 +11,10 @@ class University
 
     public function __construct(
         string $country,
-        array  $webpages,
+        array $webpages,
         string $alpha_two_code,
         string $name
-    )
-    {
-
+    ) {
         $this->country = $country;
         $this->webpages = $webpages;
         $this->alpha_two_code = $alpha_two_code;
